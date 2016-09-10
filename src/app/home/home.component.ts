@@ -26,6 +26,8 @@ export class Home {
 
   }
   display: boolean = false;
+
+  date: Date = new Date();
   
   ngOnInit() {
     console.log('hello `Home` component');

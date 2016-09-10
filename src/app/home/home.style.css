@@ -1,1 +1,9 @@
 /*styles for home content only*/
+
+button{
+	width: 200px;
+}
+
+h1 {
+	text-align: center;
+}
