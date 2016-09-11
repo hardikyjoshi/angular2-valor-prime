@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Detail } from './detail.component';
-
+import { InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule, PaginatorModule } from 'primeng/primeng';
 console.log('`Detail` bundle loaded asynchronously');
 // async components must be named routes for WebpackAsyncRoute
 export const routes = [
@@ -19,7 +19,8 @@ export const routes = [
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule, PaginatorModule
   ]
 })
 export default class AboutModule {

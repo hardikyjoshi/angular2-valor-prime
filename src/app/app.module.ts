@@ -50,7 +50,7 @@ type StoreType = {
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
-    BrowserModule, InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule, PaginatorModule,
+    InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule, PaginatorModule,
     AlertModule, DatepickerModule, AccordionModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
