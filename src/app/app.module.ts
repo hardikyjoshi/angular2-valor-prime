@@ -18,7 +18,7 @@ import { Home } from './home';
 import { About } from './about';
 import { NoContent } from './no-content';
 import { XLarge } from './home/x-large';
-import {InputTextModule,DataTableModule,ButtonModule,DialogModule} from 'primeng/primeng';
+import { InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule,PaginatorModule } from 'primeng/primeng';
 import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 // Application wide providers
@@ -37,7 +37,7 @@ type StoreType = {
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
-  bootstrap: [ App ],
+  bootstrap: [App],
   declarations: [
     App,
     About,
@@ -50,7 +50,7 @@ type StoreType = {
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
-    BrowserModule,InputTextModule,DataTableModule,ButtonModule,DialogModule,
+    BrowserModule, InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule,PaginatorModule,
     AlertModule, DatepickerModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
@@ -59,7 +59,7 @@ type StoreType = {
   ]
 })
 export class AppModule {
-  constructor(public appRef: ApplicationRef, public appState: AppState) {}
+  constructor(public appRef: ApplicationRef, public appState: AppState) { }
 
   hmrOnInit(store: StoreType) {
     if (!store || !store.state) return;
@@ -85,7 +85,7 @@ export class AppModule {
     // recreate root elements
     store.disposeOldHosts = createNewHosts(cmpLocation);
     // save input values
-    store.restoreInputValues  = createInputTransfer();
+    store.restoreInputValues = createInputTransfer();
     // remove styles
     removeNgStyles();
   }
