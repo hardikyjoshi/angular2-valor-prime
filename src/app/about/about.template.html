@@ -1,0 +1,15 @@
+<h1>Datatables</h1>
+
+<p-dataTable [value]="localState" [paginator]="false" [(selection)]="selectedCompanies" (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)" >
+    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+    <p-column field="companyName" header="Company Name" [sortable]="true"></p-column>
+    <p-column field="companyId" header="Company Id" [sortable]="true"></p-column>
+    <p-column field="contractAmt" header="Contract Amount" [sortable]="true"></p-column>
+    <footer>
+        <span>Jump to page: </span><input #pageField type="text" [(ngModel)]="values" (keyup.enter)="navigateToPage(values=pageField.value)" />
+        <ul>
+            <li *ngFor="let company of selectedCompanies" style="text-align: left">{{company.companyName + ' - ' + company.companyId + ' - ' + company.contractAmt}}</li>
+        </ul>
+    </footer>
+</p-dataTable>
+<p-paginator rows="10" [totalRecords]="localStateTotal" [rowsPerPageOptions]="[10,20,50,100,'All']" (onPageChange)="paginate($event)" [pageLinkSize]="3"></p-paginator>
