@@ -18,8 +18,8 @@ import { Home } from './home';
 import { About } from './about';
 import { NoContent } from './no-content';
 import { XLarge } from './home/x-large';
-import { InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule,PaginatorModule } from 'primeng/primeng';
-import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule, PaginatorModule } from 'primeng/primeng';
+import { AlertModule, DatepickerModule, AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -50,8 +50,8 @@ type StoreType = {
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
-    BrowserModule, InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule,PaginatorModule,
-    AlertModule, DatepickerModule
+    BrowserModule, InputTextModule, DataTableModule, ButtonModule, DialogModule, CheckboxModule, PaginatorModule,
+    AlertModule, DatepickerModule, AccordionModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

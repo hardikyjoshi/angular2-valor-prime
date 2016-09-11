@@ -1,9 +1,10 @@
 /*styles for home content only*/
-
-button{
-	width: 200px;
+.custom-style:hover{
+	color:#0095D3;
+	text-decoration: none;
 }
 
-h1 {
-	text-align: center;
+.collapsed.panel-open .custom-style,.collapsed.panel-open .custom-style:focus{
+	color:#0095D3;	
+	outline: none;
 }
